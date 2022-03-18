@@ -1,7 +1,7 @@
 ## Problem Setup
 
 For our project, we decided to combine a few different methods to solve the problem of detecting license plate numbers from a picture. This included the following steps:
-  1. First, we needed to detect the region of the image where the license plate is
+  1. First, we needed to use features of the image, specifically contours, to detect the region of the image where the license plate is
   2. Next, we need to segment the license plate into images of individual characters
   3. Last, we need to train a classifier to output an alphaneumeric character based on an image of a character
 
