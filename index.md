@@ -21,13 +21,13 @@ For this section, we referenced this [article](https://www.section.io/engineerin
 
 ### Plate Segmentation
 
-For segmentation of individual characters within the license plate, we used a similar technique of looking for bounding rectangles after applying a filter and identifying contours. Specifically for the numbers within the license plate, we look for rectangles with a vertical orientation, as letters and numbers on a license plate are always more tall than wide. Essentially, this means we check if the bounding box's heigt is over twice its width. We could not make this assumption for the bounding box of the license plate itself because we had different orientations of rectangles in our data. Here is an example of what the license plate looks like before we identify the countours and bounding boxes:
+For segmentation of individual characters within the license plate, we used a similar technique of looking for bounding rectangles after applying a filter and identifying contours. Specifically for the numbers within the license plate, we look for rectangles with a vertical orientation, as letters and numbers on a license plate are always more tall than wide. Essentially, this means we check if the bounding box's height is over twice its width. We could not make this assumption for the bounding box of the license plate itself because we had different orientations of rectangles in our data. Here is an example of what the license plate looks like before we identify the countours and bounding boxes:
 
 ![segment](https://user-images.githubusercontent.com/32994901/158922082-c4f736d5-0d12-40d5-b798-c2e4ae613e07.jpg)
 
 Once we identify the rectangular regions of the individual characters of the plate, we can run our trained character classifier to extract the entire plate number.
 
-For this section, we referenced this [article](https://medium.com/@quangnhatnguyenle/detect-and-recognize-vehicles-license-plate-with-machine-learning-and-python-part-2-plate-de644de9849f) by Quang Nguyen. We borrowed the code for identifying segments based on bounding rectangle height ratio from the article, and the rest of the code is loosely based on the approaches in the article.
+For this section, we referenced this [article](https://medium.com/@quangnhatnguyenle/detect-and-recognize-vehicles-license-plate-with-machine-learning-and-python-part-2-plate-de644de9849f) by Quang Nguyen. We borrowed the code for identifying segments based on bounding rectangle height-width ratio from the article, and the rest of the code is loosely based on the approaches in the article.
 
 
 
