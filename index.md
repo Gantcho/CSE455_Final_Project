@@ -30,34 +30,16 @@ Once we identify the rectangular regions of the individual characters of the pla
 
 ### Character Recognition
 
-### Markdown
+The last thing to train was an alphaneumeric character classifier so we could read out each individual character segment on the plate. There have been countless datasets and implementations of these types of classifiers, like CIFAR-10 for example. As a result, we drew inspiration from this [article](https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676) written by Sakshi Butala in order to train a convolutional neural net with Max Pooling to classify characters. To train this classifier, we used this [dataset](https://github.com/quangnhat185/Plate_detect_and_recognize) from Quang Nguyen.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Results
 
-```markdown
-Syntax highlighted code block
+With everything put together, our results ended up a bit disappointing. While our individual processes worked decently well, they heavily depended on a rectangular region to identify the plate and individual characters. As many of the plates in our dataset were at an angle, the bounding rectangle was not able to appropriately capture the plate, which compounded for even worse results while identifying the rectangular character segments within the plate. When we did have straight on, rectangular license plates however, our model performed well. In the image below, the model correctly predicted 31LNPG as the license plate (we chose to omit recognizing '-' in our model):
 
-# Header 1
-## Header 2
-### Header 3
+![test](https://user-images.githubusercontent.com/32994901/158928075-a8eda14a-d303-4543-9b49-26073480b157.jpeg)
 
-- Bulleted
-- List
+We also were able to almost correctly read a plate with multiple vehicles in the frame. In the image below, our model predicted 54VN8N instead of 54VNBN, which is understandable as 8 and B look very similar:
 
-1. Numbered
-2. List
+![test2](https://user-images.githubusercontent.com/32994901/158928382-4b52e8fb-e46c-4106-b11e-ece78cf3e948.jpeg)
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Gantcho/CSE455_Final_Project/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Overall, while we did have some success, our model greatly struggled without heavily standardized and easy to bound images. When we tested on more realistic and natural photos of vehicles at angles, the model was not able to generate a properly bounded rectangle and struggled. In the future, we might consider using a more flexible bounding technique, such as finding a bounding parallelogram to allow for angled inputs instead of a rectangle.
