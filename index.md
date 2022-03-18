@@ -7,7 +7,9 @@ For our project, we decided to combine a few different methods to solve the prob
 
 The data we used to to evaluate our model on is courtest of [Pieter van Mill](https://www.kaggle.com/pcmill/license-plates-on-vehicles?select=04QSYty5zbXJKfpo.jpeg) on Kaggle.
 
-The license plates are of a variety of colors, shapes, and lengths as they cover different types of vehicles from multiple European countries. As such, we faced difficulties in identifying the region of the image where the license plate was. The approach we used was to identify contours in the image, approximate them as polynomials, and then if it was in a rectangular shape (which we determined was if it had 4 sides), we would create a bounding rectangle to surround the contour. As an example, for this ![plate](https://github.com/Gantcho/CSE455_Final_Project/blob/ecc693ec717c004ba16fd30f3cf0f80f9297550f/test.jpg)
+The license plates are of a variety of colors, shapes, and lengths as they cover different types of vehicles from multiple European countries. As such, we faced difficulties in identifying the region of the image where the license plate was. The approach we used was to identify contours in the image, approximate them as polynomials, and then if it was in a rectangular shape (which we determined was if it had 4 sides), we would create a bounding rectangle to surround the contour. As an example, for this license plate: ![plate](https://github.com/Gantcho/CSE455_Final_Project/blob/ecc693ec717c004ba16fd30f3cf0f80f9297550f/test.jpg)
+
+We identified this bounding box: ![box](https://github.com/Gantcho/CSE455_Final_Project/blob/ecc693ec717c004ba16fd30f3cf0f80f9297550f/test.jpg_bounding_box.png)
 
 ### Markdown
 
