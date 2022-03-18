@@ -1,8 +1,11 @@
-## Welcome to GitHub Pages
+## Problem Setup
 
-You can use the [editor on GitHub](https://github.com/Gantcho/CSE455_Final_Project/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+For our project, we decided to combine a few different methods to solve the problem of detecting license plate numbers from a picture. This included the following steps:
+  1. First, we needed to detect the region of the image where the license plate is
+  2. Next, we need to segment the license plate into images of individual characters
+  3. Last, we need to train a classifier to output an alphaneumeric character based on an image of a character
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The data we used to to evaluate our model on is courtest of [Pieter van Mill](https://www.kaggle.com/pcmill/license-plates-on-vehicles?select=04QSYty5zbXJKfpo.jpeg) on Kaggle. The license plates are of a variety of colors, shapes, and lengths as they cover different types of vehicles from multiple European countries. As such, th
 
 ### Markdown
 
