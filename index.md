@@ -17,20 +17,25 @@ We identified this bounding box:
 
 ![box](https://user-images.githubusercontent.com/32994901/158915120-5e5df26f-d348-4d38-aa88-ab26206fcf5f.png)
 
-For this section, we referenced this [article](https://www.section.io/engineering-education/license-plate-detection-and-recognition-using-opencv-and-pytesseract/) by Simon Kuriri.
+For this section, we referenced this [article](https://www.section.io/engineering-education/license-plate-detection-and-recognition-using-opencv-and-pytesseract/) by Simon Kuriri. Specifically, we followed the technique in the article for identifying a bounding rectangle based on the polygon approximation of a contour.
 
 ### Plate Segmentation
 
 For segmentation of individual characters within the license plate, we used a similar technique of looking for bounding rectangles after applying a filter and identifying contours. Specifically for the numbers within the license plate, we look for rectangles with a vertical orientation, as letters and numbers on a license plate are always more tall than wide. Essentially, this means we check if the bounding box's heigt is over twice its width. We could not make this assumption for the bounding box of the license plate itself because we had different orientations of rectangles in our data. Here is an example of what the license plate looks like before we identify the countours and bounding boxes:
-![segment](https://user-images.githubusercontent.com/32994901/158922082-c4f736d5-0d12-40d5-b798-c2e4ae613e07.jpg)
 
-For this section, we referenced this [article](https://medium.com/@quangnhatnguyenle/detect-and-recognize-vehicles-license-plate-with-machine-learning-and-python-part-2-plate-de644de9849f) by Quang Nguyen.
+![segment](https://user-images.githubusercontent.com/32994901/158922082-c4f736d5-0d12-40d5-b798-c2e4ae613e07.jpg)
 
 Once we identify the rectangular regions of the individual characters of the plate, we can run our trained character classifier to extract the entire plate number.
 
+For this section, we referenced this [article](https://medium.com/@quangnhatnguyenle/detect-and-recognize-vehicles-license-plate-with-machine-learning-and-python-part-2-plate-de644de9849f) by Quang Nguyen. We borrowed the code for identifying segments based on bounding rectangle height ratio from the article, and the rest of the code is loosely based on the approaches in the article.
+
+
+
 ### Character Recognition
 
-The last thing to train was an alphaneumeric character classifier so we could read out each individual character segment on the plate. There have been countless datasets and implementations of these types of classifiers, like CIFAR-10 for example. As a result, we drew inspiration from this [article](https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676) written by Sakshi Butala in order to train a convolutional neural net with Max Pooling to classify characters. To train this classifier, we used this [dataset](https://github.com/quangnhat185/Plate_detect_and_recognize) from Quang Nguyen.
+The last thing to train was an alphaneumeric character classifier so we could read out each individual character segment on the plate. There have been countless datasets and implementations of these types of classifiers, like CIFAR-10 for example. 
+
+As a result, we drew inspiration from this [article](https://towardsdatascience.com/building-and-deploying-an-alphabet-recognition-system-7ab59654c676) written by Sakshi Butala in order to train a convolutional neural net with Max Pooling to classify characters. To train this classifier, we used this [dataset](https://github.com/quangnhat185/Plate_detect_and_recognize) from Quang Nguyen. For this section, we borrowed the neural net architecture and handled the data loading and data transformation ourselves.
 
 ### Results
 
