@@ -5,7 +5,7 @@ For our project, we decided to combine a few different methods to solve the prob
   2. Next, we need to segment the license plate into images of individual characters
   3. Last, we need to train a classifier to output an alphaneumeric character based on an image of a character
 
-The data we used to to evaluate our model on is courtest of [Pieter van Mill](https://www.kaggle.com/pcmill/license-plates-on-vehicles?select=04QSYty5zbXJKfpo.jpeg) on Kaggle. There were no labels provided for this dataset, so we had to hand label the data. Some images had obscured license plates or were too blurry to use, so we didn't use those.
+The inputs we used to to evaluate our model on is courtesy of [Pieter van Mill](https://www.kaggle.com/pcmill/license-plates-on-vehicles?select=04QSYty5zbXJKfpo.jpeg) on Kaggle. There were no labels provided for this dataset, so we had to hand label the data. Some images had obscured license plates or were too blurry to use, so we didn't use those.
 
 ### License Plate Bounding
 
