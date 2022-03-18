@@ -11,6 +11,7 @@ The license plates are of a variety of colors, shapes, and lengths as they cover
 ![plate](https://user-images.githubusercontent.com/32994901/158915096-b01b7d45-7886-4976-90b4-ad5f9467b63f.jpg)
 
 We identified this bounding box:
+
 ![box](https://user-images.githubusercontent.com/32994901/158915120-5e5df26f-d348-4d38-aa88-ab26206fcf5f.png)
 
 ### Markdown
