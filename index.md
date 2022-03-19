@@ -52,4 +52,5 @@ Overall, while we did have some success, our model greatly struggled without hea
 ### Video Presentation
 
 Here is our [video](https://www.youtube.com/watch?v=ELPXl4PvVNI)
+
 Here is the repo for our [code](https://github.com/Gantcho/CSE455_Final_Project/tree/master)
