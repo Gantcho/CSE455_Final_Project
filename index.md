@@ -49,7 +49,7 @@ We also were able to almost correctly read a plate with multiple vehicles in the
 
 Overall, while we did have some success, our model greatly struggled without heavily standardized and easy to bound images. When we tested on more realistic and natural photos of vehicles at angles, the model was not able to generate a properly bounded rectangle and struggled. In the future, we might consider using a more flexible bounding technique, such as finding a bounding parallelogram to allow for angled inputs instead of a rectangle. Alternatively, we might want to try applying a perspective transform to the image in order to get a more straight-on view of the license plate.
 
-### Video Presentation
+### Video and Code
 
 Here is our [video](https://www.youtube.com/watch?v=ELPXl4PvVNI)
 
