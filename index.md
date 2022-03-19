@@ -51,4 +51,4 @@ Overall, while we did have some success, our model greatly struggled without hea
 
 ### Video Presentation
 
-![video](https://youtu.be/ELPXl4PvVNI)
+![video](<iframe width="1280" height="773" src="https://www.youtube.com/embed/ELPXl4PvVNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
